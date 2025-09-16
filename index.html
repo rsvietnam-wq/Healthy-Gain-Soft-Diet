@@ -106,7 +106,7 @@ document.querySelectorAll('.day-btn').forEach(button => {
   button.addEventListener('click', () => {
     const dayId = button.getAttribute('data-day');
     const img = document.querySelector('.image-box img');
-    img.src = `./assets/${dayId}.jpg`;
+    img.src = `./assets/${dayId}.png`;
     img.alt = `Thực đơn ${button.textContent}`;
   });
 });

@@ -178,3 +178,12 @@ body {
   margin: 20px 0;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+.tip-box {
+  background: #f0f9ff;
+  border-left: 4px solid #3ba5d8;
+  padding: 15px;
+  margin-top: 25px;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.95rem;
+  color: #2c5d7a;
+}

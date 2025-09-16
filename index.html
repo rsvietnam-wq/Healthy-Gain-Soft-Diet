@@ -37,20 +37,9 @@
     <main class="main-content">
       <!-- Ảnh minh họa -->
       <div class="image-box">
-        <!-- Ảnh minh họa chung -->
-<img src="./assets/monday.png" alt="Thực đơn Thứ Hai" />
-
-<!-- Hoặc nếu bạn muốn ảnh thay đổi theo ngày -->
-<div id="monday" class="day-content active">
-  <img src="./assets/monday.png" alt="Thứ Hai" class="day-image" />
-  <!-- ... nội dung ... -->
+  <img src="./assets/monday.png" alt="Thực đơn Thứ Hai" />
+  <p>Ảnh minh họa: Món ăn mềm, dễ tiêu, giàu dinh dưỡng 💖</p>
 </div>
-
-<div id="tuesday" class="day-content">
-  <img src="./assets/tuesday.png" alt="Thứ Ba" class="day-image" />
-  <!-- ... nội dung ... -->
-</div>
-
       <!-- Nội dung thực đơn theo ngày -->
       <div class="menu-content">
         <div id="monday" class="day-content active">
@@ -112,6 +101,15 @@
         document.getElementById(dayId).classList.add('active');
       });
     });
+    // Tự động thay ảnh theo ngày
+document.querySelectorAll('.day-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const dayId = button.getAttribute('data-day');
+    const img = document.querySelector('.image-box img');
+    img.src = `./assets/${dayId}.jpg`;
+    img.alt = `Thực đơn ${button.textContent}`;
+  });
+});
   </script>
 </body>
 </html>

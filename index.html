@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Healthy Gain Soft Diet 🍽️</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar trái -->
+    <aside class="sidebar">
+      <h2>📅 Chọn ngày</h2>
+      <div class="day-buttons">
+        <button class="day-btn" data-day="monday">Thứ Hai</button>
+        <button class="day-btn" data-day="tuesday">Thứ Ba</button>
+        <button class="day-btn" data-day="wednesday">Thứ Tư</button>
+        <button class="day-btn" data-day="thursday">Thứ Năm</button>
+        <button class="day-btn" data-day="friday">Thứ Sáu</button>
+        <button class="day-btn" data-day="saturday">Thứ Bảy</button>
+      </div>
+
+      <div class="philosophy">
+        <h3>🌿 Triết lý “Soft Gain”</h3>
+        <ul>
+          <li><strong>🍚 Mềm mịn</strong> — Không đồ cứng, thô, khó nuốt.</li>
+          <li><strong>⚖️ Cân bằng</strong> — Đủ đạm, béo tốt, tinh bột dễ hấp thu.</li>
+          <li><strong>🥛 Giàu năng lượng</strong> — Qua sữa, sinh tố, chè, súp.</li>
+          <li><strong>🍌 Ngọt ngào & dễ ăn</strong> — Kích thích vị giác.</li>
+          <li><strong>🧘 Không ép ăn</strong> — Chia nhỏ bữa, ăn khi đói.</li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Nội dung chính phải -->
+    <main class="main-content">
+      <!-- Ảnh minh họa -->
+      <div class="image-box">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Món ăn mềm mại dễ tiêu" />
+        <p>Ảnh minh họa: Món ăn mềm, dễ tiêu, giàu dinh dưỡng 💖</p>
+      </div>
+
+      <!-- Nội dung thực đơn theo ngày -->
+      <div class="menu-content">
+        <div id="monday" class="day-content active">
+          <h2>🍳 Thực đơn Thứ Hai</h2>
+          <div class="meal">
+            <h3>🌅 Bữa sáng</h3>
+            <p>Cháo gà xé + 1 quả trứng luộc + 1 ly sữa tươi</p>
+          </div>
+          <div class="meal">
+            <h3>☀️ Bữa phụ sáng</h3>
+            <p>Sinh tố chuối + bơ + sữa đặc</p>
+          </div>
+          <div class="meal">
+            <h3>🌞 Bữa trưa</h3>
+            <p>Cơm mềm + Cá hồi sốt cà + Canh rau ngót thịt bằm + Sữa chua</p>
+          </div>
+          <div class="meal">
+            <h3>🌤 Bữa phụ chiều</h3>
+            <p>Bánh flan + 1 ly sữa ấm</p>
+          </div>
+          <div class="meal">
+            <h3>🌙 Bữa tối</h3>
+            <p>Súp gà nấm + Bánh mì mềm phết bơ đậu phộng + Sữa nóng</p>
+          </div>
+        </div>
+
+        <!-- Các ngày khác (ẩn mặc định) -->
+        <div id="tuesday" class="day-content">
+          <h2>🥯 Thực đơn Thứ Ba</h2>
+          <div class="meal">
+            <h3>🌅 Bữa sáng</h3>
+            <p>Bánh cuốn nhân thịt + Nước dùng xương + Sữa đậu nành</p>
+          </div>
+          <div class="meal">
+            <h3>☀️ Bữa phụ sáng</h3>
+            <p>Chuối chín + Hạt chia ngâm sữa</p>
+          </div>
+          <!-- ... điền tiếp ... -->
+          <p>👉 <em>Đang cập nhật chi tiết...</em></p>
+        </div>
+
+        <div id="wednesday" class="day-content"><h2>🍲 Thứ Tư</h2><p>👉 Đang cập nhật...</p></div>
+        <div id="thursday" class="day-content"><h2>🍛 Thứ Năm</h2><p>👉 Đang cập nhật...</p></div>
+        <div id="friday" class="day-content"><h2>🥘 Thứ Sáu</h2><p>👉 Đang cập nhật...</p></div>
+        <div id="saturday" class="day-content"><h2>🥗 Thứ Bảy</h2><p>👉 Đang cập nhật...</p></div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    document.querySelectorAll('.day-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        // Ẩn tất cả
+        document.querySelectorAll('.day-content').forEach(content => {
+          content.classList.remove('active');
+        });
+        // Hiện nội dung ngày được chọn
+        const dayId = button.getAttribute('data-day');
+        document.getElementById(dayId).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
